@@ -1,0 +1,42 @@
+@import "./assets/css/bs4_grid_only.min.css";
+@import "./assets/scss/form_styles.scss";
+@import "./assets/scss/header.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f46b45;
+  background: -webkit-linear-gradient(to right, #eea849, #f46b45);
+  background: linear-gradient(to right, #eea849, #f46b45);
+}
+
+main {
+  padding-top: 80px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.mainTitle {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.noPadding {
+  padding: 0 !important;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
+}

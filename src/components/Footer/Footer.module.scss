@@ -1,0 +1,30 @@
+.HeartWrapper {
+  width: 210px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  z-index: 0;
+}
+
+.FavHeartText {
+  color: #fff;
+  padding-right: 40px;
+}
+
+.FavHeart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  background: url("../../assets/images/heart_sprite.png") no-repeat;
+  background-position: 0 0;
+  animation: Albums_fave-heart__6xVPN 1s steps(28);
+  transform: scale(0.7);
+  &:hover {
+    background-position: -2800px 0;
+    transition: background-position 1s steps(28);
+  }
+}

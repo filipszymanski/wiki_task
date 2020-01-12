@@ -1,0 +1,97 @@
+.FormControl {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto 20px auto;
+  input {
+    padding: 10px 20px 10px 65px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    font-weight: 300;
+    &:focus {
+      box-shadow: 0 0 20px #e05e11e0;
+    }
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    top: 5px;
+    position: absolute;
+    z-index: 1;
+    &.search {
+      background: url("../icons/search.svg") no-repeat center center / 30px;
+    }
+    &.replace {
+      background: url("../icons/replace.svg") no-repeat center center / 25px;
+    }
+  }
+  button {
+    height: 60px;
+    border: none;
+    font-weight: 300;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    background: #f46b45;
+    background: -webkit-linear-gradient(to right, #f46b4542 #eea84982);
+    background: linear-gradient(to right, #f46b4542, #eea84982);
+    transition: 0.3s ease-in-out;
+    outline: none;
+    &[disabled] {
+      background: #ccc;
+      &:hover {
+        background: #ccc;
+        border: 1px solid #fff;
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    &:nth-of-type(even) {
+      border-left: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .FormControl {
+    margin-bottom: 20px;
+    input,
+    button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    input {
+      font-size: 18px;
+      line-height: 42px;
+    }
+    button {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .FormControl {
+    input {
+      font-size: 12px;
+      line-height: 42px;
+    }
+  }
+}
